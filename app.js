@@ -6,6 +6,8 @@ const app = express();
 
 const mainRouter = require('./routes/main');
 
+app.use(express.json());
+
 app.use('/api/v1/', mainRouter);
 
 const notFoundMiddleware = require('./middleware/not-found');
